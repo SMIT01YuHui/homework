@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      <meta charset="UTF-8">
+    <title>輸入一個日期，用程式計算出當天是當年度的第幾天?</title>
+        
+    </head>
+    <body>
+      <h2>輸入一個日期，用程式計算出當天是當年度的第幾天?</h2>
+      
+      
+        <label for="bday">
+        輸入一個日期
+      </label>
+      <input type="date" id="bday" name="bday"/>
+      
+      
+      <div>
+        <button id="but" name="but" onclick="myFunction()">計算出當天是當年度的第幾天?</button>
+      </div>
+      
+      
+  <div id="demo"></div>      
+    </body>
+  <script>
+    
+    var but = document.getElementById("but");
+    
+    function myFunction() {
+      
+      
+    var s1 = new Date("2017-01-01" );
+    var bday = document.getElementById("bday");
+    var d = bday.value;
+    var days = new Date("bday").getDate();
+    
+    // var d = new Date(bday);
+    // document.write(bday.getDate())
+    // document.write(d.getYear()) 
+    var time_different = (d - s1) / 86400000;
+    
+     document.getElementById("demo").innerHTML=time_different;
+    
+    
+    }
+  
+  </script>
+</html>

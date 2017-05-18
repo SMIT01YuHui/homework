@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+      <meta charset="UTF-8">
+    <title>水仙花數</title>
+        
+    </head>
+    <body>
+      <h2>水仙花數 = 三位數各數字的立方和等於該數(例如:153)，請寫程式列出所有的水仙花數。</h2>
+      <label for="i">
+                    <!--<span class="glyphicon glyphicon-user"></span> -->
+                    請輸入水仙花數
+                </label>
+      <input type="text" id="i" name="i"/>
+      <div id="demo"></div>
+        
+    </body>
+  <script >
+  var i = document.getElementById("i").value; 
+  var demo = document.getElementById("demo"); 
+      for(var i = 100 ; i <= 999 ; i++){
+
+//得到這個i的每一個位
+var hundreds= parseInt(i / 100);
+var decade= parseInt(i % 100 / 10);
+var unit= i % 10;
+//驗證是否符合水仙花數的特點
+if(Math.pow(hundreds,3) + Math.pow(decade,3) + Math.pow(unit,3) == i){
+console.log(i);
+}
+demo1.innerHTML =i;
+}
+
+
+// 原文網址：https://kknews.cc/zh-tw/other/6aqrlq.html
+  </script>
+</html>
